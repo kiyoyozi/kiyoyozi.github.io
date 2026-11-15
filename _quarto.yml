@@ -5,8 +5,8 @@ project:
 website:
   title: "Kiyoyozi"
   description: "An air quality lab at Ifakara Health Institute publishing open, hyperlocal PM2.5 data for Dar es Salaam."
-  # Change this if the repo is renamed or a custom domain is added.
-  site-url: "https://kiyoyozi.github.io/website/"
+  # Organisation site: served from the kiyoyozi.github.io repository. Update if a custom domain is added.
+  site-url: "https://kiyoyozi.github.io/"
   favicon: assets/logo.svg
   search: false
   open-graph: true

@@ -25,4 +25,4 @@ Every push to `main` renders the site and publishes it via `.github/workflows/pu
 
 One-time setup: in the repository, go to **Settings > Pages > Build and deployment** and set **Source** to **GitHub Actions**.
 
-The site will be at <https://kiyoyozi.github.io/website/>. If you rename the repository or add a custom domain, update `site-url` in `_quarto.yml`.
+The site is at <https://kiyoyozi.github.io/>, which GitHub serves from this repository because it is named `kiyoyozi.github.io`. If you add a custom domain, update `site-url` in `_quarto.yml`.
