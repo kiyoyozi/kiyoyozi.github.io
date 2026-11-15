@@ -15,9 +15,11 @@ description: "Why Kiyoyozi exists, what it aims to do, and where it sits."
 
 ## Where we sit
 
-Kiyoyozi is based at [Ifakara Health Institute](https://ihi.or.tz) (IHI), a Tanzanian research institute. Inside IHI it connects environmental measurement with health and climate research, so the data can be used to study how air pollution affects people's health.
+Kiyoyozi is part of the Climate Change and Health Cluster in the Environmental Health and Ecological Sciences (EHES) Department at [Ifakara Health Institute](https://ihi.or.tz) (IHI), a Tanzanian health research institute.
 
-The lab is led by Kaiza Ilomo, a data engineer and researcher at IHI working on climate and health data.
+Sitting in that cluster ties air quality measurement directly to research on how a changing climate affects health, so Kiyoyozi's data can feed studies of how air pollution affects people in Dar es Salaam and beyond.
+
+The lab is led by [Kaiza Ilomo](https://kaiza.kunonu.com), a data engineer and researcher at IHI working on climate and health data.
 
 <!-- TODO: add other team members (name, role) here. -->
 

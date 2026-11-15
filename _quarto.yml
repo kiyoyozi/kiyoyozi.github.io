@@ -24,6 +24,7 @@ website:
       - icon: github
         href: https://github.com/kiyoyozi
         aria-label: Kiyoyozi on GitHub
+        target: _blank
   page-footer:
     left: "Kiyoyozi – The Air Quality Lab, [Ifakara Health Institute](https://ihi.or.tz)"
     right: "Text and data licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
@@ -34,4 +35,4 @@ format:
     lang: en-GB
     toc: false
     anchor-sections: false
-    link-external-newwindow: false
+    link-external-newwindow: true
