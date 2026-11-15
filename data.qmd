@@ -70,4 +70,4 @@ All data is released under the [Creative Commons Attribution 4.0 International](
 
 Suggested citation:
 
-> Kiyoyozi: The Air Quality Lab, Ifakara Health Institute. *Dar es Salaam PM2.5 monitoring network* [dataset]. CC BY 4.0.
+> Kiyoyozi – The Air Quality Lab, Ifakara Health Institute. *Dar es Salaam PM2.5 monitoring network* [dataset]. CC BY 4.0.

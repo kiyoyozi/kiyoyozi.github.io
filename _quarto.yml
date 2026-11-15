@@ -3,7 +3,7 @@ project:
   output-dir: _site
 
 website:
-  title: "Kiyoyozi"
+  title: "Kiyoyozi – The Air Quality Lab"
   description: "An air quality lab at Ifakara Health Institute publishing open, hyperlocal PM2.5 data for Dar es Salaam."
   # Organisation site: served from the kiyoyozi.github.io repository. Update if a custom domain is added.
   site-url: "https://kiyoyozi.github.io/"
@@ -25,7 +25,7 @@ website:
         href: https://github.com/kiyoyozi
         aria-label: Kiyoyozi on GitHub
   page-footer:
-    left: "Kiyoyozi: The Air Quality Lab, [Ifakara Health Institute](https://ihi.or.tz)"
+    left: "Kiyoyozi – The Air Quality Lab, [Ifakara Health Institute](https://ihi.or.tz)"
     right: "Text and data licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
 
 format:

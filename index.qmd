@@ -1,5 +1,5 @@
 ---
-title: "Kiyoyozi: The Air Quality Lab"
+title: "Kiyoyozi – The Air Quality Lab"
 body-classes: home
 description: "Kiyoyozi is an air quality lab at Ifakara Health Institute building an open PM2.5 monitoring network for Dar es Salaam."
 page-layout: full

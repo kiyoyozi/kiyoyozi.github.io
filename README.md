@@ -1,6 +1,6 @@
 # Kiyoyozi website
 
-Website for **Kiyoyozi: The Air Quality Lab** at Ifakara Health Institute. Built with [Quarto](https://quarto.org), deployed to GitHub Pages.
+Website for **Kiyoyozi – The Air Quality Lab** at Ifakara Health Institute. Built with [Quarto](https://quarto.org), deployed to GitHub Pages.
 
 ## Edit
 
