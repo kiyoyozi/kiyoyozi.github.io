@@ -1,0 +1,37 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Kiyoyozi"
+  description: "An air quality lab at Ifakara Health Institute publishing open, hyperlocal PM2.5 data for Dar es Salaam."
+  # Change this if the repo is renamed or a custom domain is added.
+  site-url: "https://kiyoyozi.github.io/website/"
+  favicon: assets/logo.svg
+  search: false
+  open-graph: true
+  navbar:
+    logo: assets/logo.svg
+    logo-alt: "Kiyoyozi"
+    title: "Kiyoyozi"
+    right:
+      - text: Home
+        href: index.qmd
+      - text: Data
+        href: data.qmd
+      - text: About
+        href: about.qmd
+      - icon: github
+        href: https://github.com/kiyoyozi
+        aria-label: Kiyoyozi on GitHub
+  page-footer:
+    left: "Kiyoyozi: The Air Quality Lab, [Ifakara Health Institute](https://ihi.or.tz)"
+    right: "Text and data licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"
+
+format:
+  html:
+    theme: [default, assets/kiyoyozi.scss]
+    lang: en-GB
+    toc: false
+    anchor-sections: false
+    link-external-newwindow: false

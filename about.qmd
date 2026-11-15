@@ -1,0 +1,33 @@
+---
+title: "About the lab"
+description: "Why Kiyoyozi exists, what it aims to do, and where it sits."
+---
+
+::: {.lede}
+*Kiyoyozi* is Swahili for air conditioner. We can't condition the air of a whole city, but we can measure it, openly, so the people who live in it and the people who regulate it can act on what they see.
+:::
+
+## What we aim to do
+
+- **Grow local talent.** Train Tanzanian technicians, data engineers and scientists to run an air quality network, so the skills stay in the country after the project ends.
+- **Generate open, hyperlocal data.** Produce Dar es Salaam's first sustained, publicly available record of ground-level PM2.5.
+- **Put the data to work.** Use it to raise public awareness, support rigorous research, and give policymakers the evidence they need to act on clean air.
+
+## Where we sit
+
+Kiyoyozi is based at [Ifakara Health Institute](https://ihi.or.tz) (IHI), a Tanzanian research institute. Inside IHI it connects environmental measurement with health and climate research, so the data can be used to study how air pollution affects people's health.
+
+The lab is led by Kaiza Ilomo, a data engineer and researcher at IHI working on climate and health data.
+
+<!-- TODO: add other team members (name, role) here. -->
+
+## Who the data is for
+
+The [National Environment Management Council](https://www.nemc.or.tz) (NEMC) is Tanzania's environmental regulator. Kiyoyozi's data is designed to give NEMC, and Dar es Salaam's municipal councils in Ilala, Kinondoni, Temeke, Ubungo and Kigamboni, local evidence on air quality that they can check for themselves.
+
+It is equally for residents who want to know what they are breathing, for researchers studying pollution and health in East Africa, and for journalists who want to report on it.
+
+## Contact
+
+<!-- TODO: add a project email address here once one exists. -->
+Find us on [GitHub](https://github.com/kiyoyozi), where this website is developed in the open.

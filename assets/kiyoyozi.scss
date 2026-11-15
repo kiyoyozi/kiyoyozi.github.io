@@ -1,0 +1,430 @@
+/*-- scss:defaults --*/
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+// Palette: the coast and the haze over Dar es Salaam.
+$ink: #15313B;     // text, dark bands
+$paper: #F6F8F7;   // page background
+$mist: #DCE4E2;    // rules, quiet panels
+$coast: #1F6E8C;   // links, actions, clean air
+$haze: #C4A57A;    // particulate haze
+$soot: #3B3A36;    // particles
+$muted: #5A6E73;   // captions, secondary text
+$haze-light: #E8D3B2;
+
+$body-bg: $paper;
+$body-color: $ink;
+$primary: $coast;
+$light: $paper;
+$link-color: $coast;
+$link-decoration: underline;
+$link-underline-offset: .18em;
+
+$font-family-sans-serif: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Archivo", system-ui, sans-serif;
+$headings-font-weight: 750;
+$headings-line-height: 1.12;
+$font-size-root: 18px;
+$line-height-base: 1.6;
+
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $coast;
+$footer-bg: $paper;
+$footer-fg: $muted;
+
+$border-radius: 3px;
+$btn-border-radius: 3px;
+$code-color: $ink;
+$table-border-color: $mist;
+
+/*-- scss:rules --*/
+
+// ---------- Type ----------
+
+h1, h2, h3, .navbar-title {
+  font-stretch: 118%;
+  letter-spacing: -.01em;
+}
+
+h2,
+#quarto-document-content h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-stretch: 112%;
+  margin-bottom: .4rem;
+}
+
+.navbar-title {
+  font-family: $headings-font-family;
+  font-weight: 750;
+}
+
+.navbar-logo { max-height: 28px; }
+
+.navbar { border-bottom: 1px solid $mist; }
+
+a { text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible {
+  outline: 3px solid $coast;
+  outline-offset: 2px;
+}
+
+.btn {
+  font-weight: 700;
+  padding: .55rem 1.1rem;
+  text-decoration: none;
+}
+
+// Article pages (Data, About)
+.quarto-title h1.title {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 1.25rem;
+}
+
+#quarto-document-content > h2,
+#quarto-document-content > section > h2,
+#quarto-document-content section.level2 > h2 {
+  margin-top: 2.75rem;
+  font-size: 1.6rem;
+}
+
+.lede {
+  font-size: 1.25rem;
+  line-height: 1.55;
+  max-width: 38em;
+}
+
+.status {
+  border-left: 4px solid $haze;
+  padding: .6rem 1rem;
+  margin: 1.5rem 0 1rem;
+  background: rgba($haze, .14);
+}
+
+pre, .sourceCode {
+  background: #fff;
+  border: 1px solid $mist;
+}
+
+table.spec td:first-child {
+  font-weight: 700;
+  white-space: nowrap;
+  padding-right: 2rem;
+}
+
+table.spec thead { display: none; }
+
+table.schema td:first-child { white-space: nowrap; }
+
+#quarto-document-content blockquote {
+  border-left: 4px solid $mist;
+  color: $ink;
+  padding-left: 1rem;
+}
+
+// The page description stays in <meta> for sharing; the lede says it on the page.
+.quarto-title-block .description { display: none; }
+
+// ---------- Home: layout ----------
+
+// The home page carries its own H1 in the hero; hide Quarto's generated title.
+.home .quarto-title-block { display: none; }
+
+// Bands run edge to edge; their content is held to a readable width.
+.band {
+  grid-column: screen-start / screen-end;
+  padding: clamp(3rem, 6vw, 4.75rem) 1rem;
+}
+
+#quarto-document-content .band h2 { margin-top: 0; font-size: 2rem; }
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.prose { max-width: 40em; }
+.wrap.prose { max-width: 1120px; }
+.wrap.prose > * { max-width: 40em; }
+
+// ---------- Home: hero ----------
+
+.hero {
+  grid-column: screen-start / screen-end;
+  max-width: 1120px;
+  width: 100%;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) 1rem clamp(3rem, 6vw, 4.5rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(2.1rem, 8.5vw, 3.6rem);
+  font-stretch: 115%;
+  text-wrap: balance;
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  margin: 0 0 1rem;
+}
+
+.hero-sw {
+  display: block;
+  font-family: $headings-font-family;
+  font-stretch: 110%;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: $muted;
+  margin-bottom: 1.5rem;
+}
+
+.hero-text > p { font-size: 1.15rem; max-width: 30em; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 1.75rem;
+}
+
+.actions p { display: contents; }
+
+// The particle comparison: one dot per µg/m³.
+.pm { margin: 0; }
+
+.pm-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.pm-panel svg {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 2px;
+}
+
+.pm-dar svg { background: $haze; fill: $soot; }
+.pm-who svg { background: #fff; fill: $coast; outline: 1px solid $mist; outline-offset: -1px; }
+
+.pm-value {
+  margin: .75rem 0 0;
+  font-family: $headings-font-family;
+  font-stretch: 112%;
+  font-weight: 600;
+  font-size: 1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.pm-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-stretch: 125%;
+  letter-spacing: -.02em;
+  margin-right: .1em;
+}
+
+.pm-label {
+  margin: 0;
+  color: $muted;
+  font-size: .9rem;
+}
+
+.pm figcaption {
+  margin-top: 1rem;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: $muted;
+  max-width: 34em;
+}
+
+// One moment of motion: Dar's particles settle in one by one.
+@media (prefers-reduced-motion: no-preference) {
+  .pm-dar circle {
+    opacity: 0;
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: settle .5s ease-out forwards;
+    animation-delay: calc(400ms + var(--i) * 55ms);
+  }
+}
+
+@keyframes settle {
+  from { opacity: 0; transform: scale(.2); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+// ---------- Home: sections ----------
+
+.band-gap {
+  background: #fff;
+  border-top: 1px solid $mist;
+  border-bottom: 1px solid $mist;
+}
+
+.network {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 2.5rem 0 3.5rem;
+}
+
+.network-item {
+  border-top: 3px solid $ink;
+  padding-top: 1rem;
+}
+
+.network-item p { margin: 0; }
+
+#quarto-document-content .network-item > h3,
+#quarto-document-content .audiences h3 { margin-top: 0; }
+
+.flow-title { margin-bottom: 1.25rem; }
+
+// The data path is a real sequence, so it keeps its numbers.
+.band-network ol {
+  list-style: none;
+  counter-reset: flow;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.band-network ol > li {
+  counter-increment: flow;
+  position: relative;
+  padding-top: 2.75rem;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.band-network ol > li::before {
+  content: counter(flow);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: $haze;
+  color: $ink;
+  font-family: $headings-font-family;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  font-size: .95rem;
+}
+
+// Connector line between steps
+.band-network ol > li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 2.5rem;
+  right: -.75rem;
+  border-top: 2px dotted $haze;
+}
+
+.step {
+  display: block;
+  font-family: $headings-font-family;
+  font-stretch: 112%;
+  font-weight: 750;
+  font-size: 1.1rem;
+  margin-bottom: .25rem;
+}
+
+.band-open {
+  background: $ink;
+  color: $paper;
+
+  h2 { color: $paper; }
+  a:not(.btn) { color: $haze-light; }
+  ul { padding-left: 1.2rem; }
+  li { margin-bottom: .4rem; }
+  li::marker { color: $haze; }
+  .btn { margin-top: 1rem; }
+}
+
+.roadmap ol {
+  list-style: none;
+  counter-reset: phase;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.roadmap li {
+  counter-increment: phase;
+  border-top: 3px solid $haze;
+  padding-top: 1rem;
+}
+
+.roadmap li::before {
+  content: "Phase " counter(phase);
+  display: block;
+  color: $muted;
+  font-size: .9rem;
+  margin-bottom: .35rem;
+}
+
+.roadmap strong {
+  display: block;
+  font-family: $headings-font-family;
+  font-stretch: 112%;
+  font-size: 1.15rem;
+  margin-bottom: .35rem;
+}
+
+.band-involved { background: #fff; border-top: 1px solid $mist; }
+
+.audiences {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 3rem;
+  margin: 1.5rem 0 2.5rem;
+  max-width: 54rem;
+}
+
+.audiences p { margin: 0; }
+
+// ---------- Small screens ----------
+
+@media (max-width: 991px) {
+  .hero { grid-template-columns: 1fr; }
+  .pm { max-width: 560px; }
+  .network, .roadmap ol { grid-template-columns: 1fr; gap: 1.5rem; }
+  .band-network ol { grid-template-columns: 1fr; gap: 0; }
+  .band-network ol > li { padding: 0 0 1.25rem 3rem; min-height: 3.25rem; }
+  .band-network ol > li:not(:last-child)::after {
+    top: 2.25rem; bottom: .25rem; left: 1rem; right: auto;
+    border-top: 0; border-left: 2px dotted $haze;
+  }
+}
+
+@media (max-width: 640px) {
+  .audiences { grid-template-columns: 1fr; }
+  table.schema td:first-child { white-space: normal; }
+  table.schema code { word-break: break-all; }
+  h2 { font-size: 1.65rem; }
+}
+
+.status p:last-child { margin-bottom: 0; }

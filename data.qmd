@@ -1,0 +1,73 @@
+---
+title: "Open data"
+description: "What Kiyoyozi publishes from its Dar es Salaam PM2.5 network, in what format, and under what licence."
+---
+
+::: {.lede}
+Kiyoyozi publishes every PM2.5 reading from its Dar es Salaam network as open data. This page sets out what we publish and how, so you can plan to use it before the first stations come online.
+:::
+
+::: {.status}
+Download and API links will appear here as each station comes online.
+:::
+
+## What we publish
+
+| | |
+|---|---|
+| Pollutant | PM2.5, in µg/m³ |
+| Supporting readings | Temperature (°C) and relative humidity (%) |
+| Time resolution | 15-minute averages |
+| Delay | Under one hour from measurement to publication |
+| Stations | Six across Dar es Salaam: five low-cost monitors and one reference-grade monitor |
+| Access | Bulk CSV downloads and an open API, no sign-up needed; also listed on [OpenAQ](https://openaq.org) |
+| Licence | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) |
+
+: {.spec}
+
+## Measurements file
+
+CSV, UTF-8, comma-separated, one row per station per 15-minute period.
+
+```
+timestamp,station_id,latitude,longitude,pm25_raw_ugm3,pm25_calibrated_ugm3,averaging_minutes,temperature_c,relative_humidity_pct,qc_flag
+```
+
+| Column | Description |
+|---|---|
+| `timestamp` | End of the averaging period, ISO 8601 with UTC offset, for example `2027-03-01T08:15:00+03:00` |
+| `station_id` | Stable identifier for the station; matches the stations file |
+| `latitude`, `longitude` | Station position in decimal degrees (WGS 84), five decimal places |
+| `pm25_raw_ugm3` | PM2.5 as reported by the sensor, in µg/m³ |
+| `pm25_calibrated_ugm3` | PM2.5 after calibration against the reference monitor; empty until a calibration is available |
+| `averaging_minutes` | Length of the averaging period, normally `15` |
+| `temperature_c` | Air temperature at the sensor, in °C |
+| `relative_humidity_pct` | Relative humidity at the sensor, in % |
+| `qc_flag` | `ok`, `suspect` or `invalid` (see quality control below) |
+
+: {.schema}
+
+## Stations file
+
+One row per station, published once and updated whenever a station is added, moved or retired.
+
+```
+station_id,name,latitude,longitude,site_type,instrument,installed_on,retired_on
+```
+
+`site_type` is one of `traffic`, `residential`, `industrial`, `background` or `reference`. Dates are ISO 8601 (`YYYY-MM-DD`).
+
+## Quality control
+
+- Low-cost sensors are co-located with the reference monitor and calibrated against it, before deployment and at regular intervals afterwards.
+- Raw readings are always published. Calibrated and humidity-corrected values sit alongside them, never in place of them.
+- Each row carries a quality flag. Readings are flagged, not deleted.
+- We aim for at least 75% data completeness per station per month, and publish completeness for each station.
+
+## Licence and citation
+
+All data is released under the [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/) licence. You can copy, share and adapt it for any purpose, including commercial use, as long as you credit the source.
+
+Suggested citation:
+
+> Kiyoyozi: The Air Quality Lab, Ifakara Health Institute. *Dar es Salaam PM2.5 monitoring network* [dataset]. CC BY 4.0.

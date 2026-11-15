@@ -1,0 +1,198 @@
+---
+title: "Kiyoyozi: The Air Quality Lab"
+body-classes: home
+description: "Kiyoyozi is an air quality lab at Ifakara Health Institute building an open PM2.5 monitoring network for Dar es Salaam."
+page-layout: full
+---
+
+::: {.hero .column-screen}
+::: {.hero-text}
+```{=html}
+<h1 class="hero-title">Measuring the air Dar&nbsp;es&nbsp;Salaam breathes</h1>
+```
+
+[Tunapima hewa tunayoivuta.]{.hero-sw lang="sw"}
+
+Kiyoyozi is an air quality lab at Ifakara Health Institute. We are building a network of PM2.5 monitors across Dar es Salaam and publishing every reading as open data, in near real time, for anyone to use.
+
+::: {.actions}
+[How we share the data](data.qmd){.btn .btn-primary}
+[About the lab](about.qmd){.btn .btn-outline-primary}
+:::
+:::
+
+```{=html}
+<figure class="pm" aria-labelledby="pm-caption">
+  <div class="pm-panels">
+    <div class="pm-panel pm-dar">
+      <svg viewBox="0 0 100 100" role="img" aria-label="33 dots, one for each microgram of PM2.5 per cubic metre of air, estimated for Dar es Salaam">
+        <circle cx="35.2" cy="20.7" r="2.6" style="--i:0"/>
+        <circle cx="62.7" cy="14.1" r="2.8" style="--i:1"/>
+        <circle cx="53.0" cy="38.7" r="3.3" style="--i:2"/>
+        <circle cx="12.9" cy="50.6" r="2.7" style="--i:3"/>
+        <circle cx="13.9" cy="15.6" r="2.7" style="--i:4"/>
+        <circle cx="43.7" cy="77.5" r="2.8" style="--i:5"/>
+        <circle cx="60.7" cy="87.6" r="2.3" style="--i:6"/>
+        <circle cx="90.0" cy="11.9" r="2.7" style="--i:7"/>
+        <circle cx="80.1" cy="32.3" r="2.9" style="--i:8"/>
+        <circle cx="65.2" cy="43.9" r="3.1" style="--i:9"/>
+        <circle cx="34.4" cy="57.2" r="2.1" style="--i:10"/>
+        <circle cx="74.7" cy="66.7" r="2.4" style="--i:11"/>
+        <circle cx="11.3" cy="64.1" r="2.1" style="--i:12"/>
+        <circle cx="78.6" cy="87.4" r="3.1" style="--i:13"/>
+        <circle cx="47.8" cy="63.8" r="3.0" style="--i:14"/>
+        <circle cx="18.9" cy="28.8" r="2.1" style="--i:15"/>
+        <circle cx="31.4" cy="42.9" r="3.4" style="--i:16"/>
+        <circle cx="88.1" cy="66.0" r="3.4" style="--i:17"/>
+        <circle cx="10.1" cy="81.4" r="2.9" style="--i:18"/>
+        <circle cx="22.0" cy="72.8" r="2.9" style="--i:19"/>
+        <circle cx="88.3" cy="45.6" r="2.2" style="--i:20"/>
+        <circle cx="62.9" cy="75.2" r="2.0" style="--i:21"/>
+        <circle cx="78.6" cy="19.5" r="2.7" style="--i:22"/>
+        <circle cx="26.4" cy="88.0" r="2.1" style="--i:23"/>
+        <circle cx="50.0" cy="22.9" r="2.3" style="--i:24"/>
+        <circle cx="29.0" cy="9.3" r="2.3" style="--i:25"/>
+        <circle cx="47.9" cy="50.2" r="2.0" style="--i:26"/>
+        <circle cx="49.1" cy="8.3" r="2.6" style="--i:27"/>
+        <circle cx="76.9" cy="50.7" r="2.6" style="--i:28"/>
+        <circle cx="88.1" cy="79.3" r="3.2" style="--i:29"/>
+        <circle cx="41.3" cy="91.4" r="2.7" style="--i:30"/>
+        <circle cx="8.2" cy="37.8" r="2.9" style="--i:31"/>
+        <circle cx="63.1" cy="29.0" r="2.7" style="--i:32"/>
+      </svg>
+      <p class="pm-value"><span class="pm-num">33.1</span> µg/m³</p>
+      <p class="pm-label">Estimated average, Dar es Salaam</p>
+    </div>
+    <div class="pm-panel pm-who">
+      <svg viewBox="0 0 100 100" role="img" aria-label="5 dots, the World Health Organization annual guideline for PM2.5">
+        <circle cx="28.0" cy="53.7" r="2.9"/>
+        <circle cx="60.6" cy="13.5" r="2.6"/>
+        <circle cx="9.1" cy="78.3" r="2.4"/>
+        <circle cx="91.6" cy="47.5" r="3.4"/>
+        <circle cx="61.3" cy="80.9" r="3.4"/>
+      </svg>
+      <p class="pm-value"><span class="pm-num">5</span> µg/m³</p>
+      <p class="pm-label">WHO annual guideline</p>
+    </div>
+  </div>
+  <figcaption id="pm-caption">
+    Each dot is one microgram of fine particles (PM2.5) in a cubic metre of air.
+    The Dar es Salaam figure is a 2019–2023 estimate from satellite and low-cost sensor data
+    (<a href="https://doi.org/10.1021/acs.estlett.5c00451">Chua et al., 2025</a>).
+  </figcaption>
+</figure>
+```
+:::
+
+::: {.column-screen .band .band-gap}
+::: {.wrap .prose}
+## Dar es Salaam has no public reference-grade air monitor
+
+Fine particles, known as PM2.5, are small enough to travel deep into the lungs and into the bloodstream. In Dar es Salaam they come from traffic, cooking fuels, waste burning, industry and dust.
+
+More than five million people live in the city, at around 3,865 people per square kilometre ([2022 census](https://www.nbs.go.tz/)). The best recent estimate puts average PM2.5 around the city at 33.1 µg/m³, more than six times the World Health Organization's [annual guideline](https://www.who.int/publications/i/item/9789240034228). Yet that estimate had to be checked against reference monitors in Kampala and Nairobi, because no reference-grade monitor in Dar es Salaam shares its data publicly.
+
+Without local, ground-level measurements, residents cannot see what they are breathing, researchers cannot link pollution to health with confidence, and regulators have no local evidence to set and enforce standards.
+:::
+:::
+
+::: {.column-screen .band .band-network}
+::: {.wrap}
+::: {.prose}
+## What we are building
+
+A small, dense network designed to keep running in Dar es Salaam's conditions.
+:::
+
+::: {.network}
+::: {.network-item}
+### Five low-cost monitors
+
+Placed to represent traffic corridors, residential neighbourhoods, industrial areas and background air across the city.
+:::
+
+::: {.network-item}
+### One reference-grade monitor
+
+The anchor of the network. Low-cost sensors are co-located with it and calibrated against it, so their readings can be trusted.
+:::
+
+::: {.network-item}
+### Solar power, cellular data
+
+Every station runs on its own power and connection, because mains electricity and internet access are too unreliable to depend on.
+:::
+:::
+
+### From sensor to open data {.flow-title}
+
+1. [Measure]{.step} PM2.5, temperature and humidity, averaged every 15 minutes.
+2. [Send]{.step} Readings travel over the cellular network to our data platform.
+3. [Check]{.step} Automatic quality flags, and regular calibration against the reference monitor.
+4. [Publish]{.step} Within an hour of measurement, as CSV files and through an open API.
+5. [Reuse]{.step} Listed on OpenAQ and free for residents, researchers, journalists and regulators.
+:::
+:::
+
+::: {.column-screen .band .band-open}
+::: {.wrap .prose}
+## Open by default
+
+Every reading we collect will be published:
+
+- in micrograms per cubic metre, the physical unit, never converted to an index;
+- with station coordinates to five decimal places, about one metre;
+- within an hour of being measured;
+- as structured CSV that [OpenAQ](https://openaq.org) and other platforms can ingest directly;
+- under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licence, with no sign-up needed.
+
+[Read the data specification](data.qmd){.btn .btn-light}
+:::
+:::
+
+::: {.column-screen .band .band-roadmap}
+::: {.wrap}
+::: {.prose}
+## The first 18 months
+:::
+
+::: {.roadmap}
+1. **Months 1–6: deploy.** Assess and select sites, install and commission all six monitors, publish station details, and train the first technicians in operation, maintenance and calibration.
+2. **Months 7–12: publish and engage.** Run continuous monitoring, launch a public dashboard in Swahili and English, release quarterly air quality reports, and brief the National Environment Management Council (NEMC) on what the data shows.
+3. **Months 13–18: sustain and hand over.** Complete a full year of seasonal data, share evidence to inform national PM2.5 standards, and set out how the network can continue under public ownership.
+:::
+:::
+:::
+
+::: {.column-screen .band .band-involved}
+::: {.wrap}
+::: {.prose}
+## Work with us
+:::
+
+::: {.audiences}
+::: {}
+### Students and early-career scientists
+We will train interns in data engineering and in sensor installation, maintenance and calibration.
+:::
+
+::: {}
+### Researchers
+Use the data, or collaborate with us on calibration, pollution sources and health effects.
+:::
+
+::: {}
+### Government and regulators
+Ask us for a briefing on what the network is measuring and how to use it.
+:::
+
+::: {}
+### Journalists and community groups
+We can help you read the numbers and explain them in Swahili or English.
+:::
+:::
+
+<!-- TODO: add a project email address here once one exists. -->
+[Get in touch on GitHub](https://github.com/kiyoyozi){.btn .btn-primary}
+:::
+:::
