@@ -25,6 +25,10 @@ website:
         href: https://github.com/kiyoyozi
         aria-label: Kiyoyozi on GitHub
         target: _blank
+      - icon: linkedin
+        href: https://www.linkedin.com/company/kiyoyozi-the-air-quality-lab/
+        aria-label: Kiyoyozi on LinkedIn
+        target: _blank
   page-footer:
     left: "Kiyoyozi – The Air Quality Lab, [Ifakara Health Institute](https://ihi.or.tz)"
     right: "Text and data licensed [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)"

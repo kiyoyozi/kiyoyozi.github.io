@@ -32,4 +32,4 @@ It is equally for residents who want to know what they are breathing, for resear
 ## Contact
 
 <!-- TODO: add a project email address here once one exists. -->
-Find us on [GitHub](https://github.com/kiyoyozi), where this website is developed in the open.
+Follow the lab on [LinkedIn](https://www.linkedin.com/company/kiyoyozi-the-air-quality-lab/) for updates, and find us on [GitHub](https://github.com/kiyoyozi), where this website is developed in the open.
